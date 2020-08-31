@@ -1,5 +1,6 @@
 # xatlas for Unity
-xatlas wrapper used by Bakery (https://geom.io/bakery/wiki/index.php?title=Bakery_-_GPU_Lightmapper)
+Originally forked from:https://github.com/guycalledfrank/xatlasLib
+Used by Bakery (https://geom.io/bakery/wiki/index.php?title=Bakery_-_GPU_Lightmapper)
 
 This is a simple DLL interface for xatlas: https://github.com/jpcy/xatlas
 
