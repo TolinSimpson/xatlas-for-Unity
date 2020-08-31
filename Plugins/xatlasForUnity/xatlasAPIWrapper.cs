@@ -104,40 +104,14 @@ namespace xatlas
 
         }
 
-        /// <summary>
-        /// Port from Unity Editor. Parameters for UV Unwrapping.
-        /// </summary>
-        public struct UnwrapParam
-        {
-            /// <summary>
-            ///    Maximum allowed angle distortion (0..1).
-            /// </summary>
-            public float angleError;
-
-            /// <summary>
-            ///  Maximum allowed area distortion (0..1).
-            /// </summary>
-            public float areaError;
-
-            /// <summary>
-            /// This angle (in degrees) or greater between triangles will cause seam to be created.
-            /// </summary>
-            public float hardAngle;
-
-            /// <summary>
-            ///  How much uv-islands will be padded.
-            /// </summary>
-            public float packMargin;
-        }
-
         public static double GetTime()
         {
             return (System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond) / 1000.0;
         }
 
-        public static void Unwrap(Mesh m, UnwrapParam uparams)
+        public static void Unwrap(Mesh m, int packMargin)
         {
-            int padding = (int)(uparams.packMargin * 1024);
+            int padding = packMargin * 1024;
 
             newUVBuffer = null;
             newXrefBuffer = null;
